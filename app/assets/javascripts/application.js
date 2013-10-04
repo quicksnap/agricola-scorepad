@@ -20,6 +20,9 @@
 //= require agricola_score
 
 // for more details see: http://emberjs.com/guides/application/
-AgricolaScore = Ember.Application.create();
+App = Ember.Application.create();
 
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+// App.ApplicationAdapter = DS.FixtureAdapter;
 //= require_tree .

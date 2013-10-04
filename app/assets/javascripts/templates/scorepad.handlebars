@@ -1,0 +1,23 @@
+<h1>Scorepad</h1>
+<label for="new-player">Add player</label>
+{{input type="text" id="new-player" placeholder="New player name" value=newPlayer action="createPlayer"}}
+
+{{!-- Player Names --}}
+<ul id="names">
+  {{#each}}
+  <li>
+    {{name}}
+    <ul>
+      {{!-- Scores --}}
+      {{#each this.scores}}
+        <li>Type: {{score_type.type}}</li>
+        <li>Score {{points}}</li>
+      {{/each}}
+    </ul>
+  </li>
+  {{else}}
+  <li>
+    No records!
+  </li>
+  {{/each}}
+</ul>

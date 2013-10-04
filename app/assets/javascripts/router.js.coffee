@@ -1,5 +1,8 @@
 # For more information see: http://emberjs.com/guides/routing/
 
-AgricolaScore.Router.map ()->
-  # @resource('posts')
+App.Router.map ()->
+  @resource( 'scorepad', { path: '/' } )
 
+App.ScorepadRoute = Ember.Route.extend
+  model: ->
+    @get('store').find 'player'

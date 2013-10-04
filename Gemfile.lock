@@ -1,3 +1,15 @@
+PATH
+  remote: ../sandbox/ember-rails
+  specs:
+    ember-rails (0.13.0)
+      active_model_serializers
+      barber (>= 0.4.1)
+      ember-data-source (~> 1.0.0.beta.2)
+      ember-source (~> 1.0.0)
+      execjs (>= 1.2)
+      handlebars-source
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,16 +53,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    ember-data-source (0.14)
+    ember-data-source (1.0.0.beta.2)
       ember-source
-    ember-rails (0.13.0)
-      active_model_serializers
-      barber (>= 0.4.1)
-      ember-data-source
-      ember-source
-      execjs (>= 1.2)
-      handlebars-source
-      railties (>= 3.1)
     ember-source (1.0.0)
       handlebars-source (= 1.0.12)
     erubis (2.7.0)
@@ -128,7 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  ember-rails
+  ember-rails!
   ember-source
   jbuilder (~> 1.2)
   jquery-rails
