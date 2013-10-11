@@ -1,6 +1,6 @@
 # Agricola Scorepad
 
-!(Scorepad)[http://cf.geekdo-images.com/images/pic391243_lg.jpg]
+![Scorepad](http://cf.geekdo-images.com/images/pic391243_lg.jpg)
 
 Used as an intro to Ember/Ember-data 1.0.
 
