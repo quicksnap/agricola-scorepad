@@ -1,0 +1,10 @@
+<div>
+  <span>Score:</span>
+  {{#if isEditing}}
+    {{edit-score type="number" class="edit" value=validCount focus-out="acceptChanges"
+                           insert-newline="acceptChanges"}}
+  {{else}}
+    <span class="score" {{action "editScore" on="click"}}>{{points}}</span>
+  {{/if}}
+  <span>Type: {{score_type.type}}</span>
+</div>

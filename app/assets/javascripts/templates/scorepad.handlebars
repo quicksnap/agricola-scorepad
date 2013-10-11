@@ -1,23 +1,37 @@
-<h1>Scorepad</h1>
+<h1>Agricola Scorepad</h1>
 <label for="new-player">Add player</label>
-{{input type="text" id="new-player" placeholder="New player name" value=newPlayer action="createPlayer"}}
+{{ input type="text" id="new-player" placeholder="New player name"
+    value=newPlayer action="createPlayer" }}
 
-{{!-- Player Names --}}
-<ul id="names">
-  {{#each}}
+<ul>
+  {{!-- Each Player --}}
+  {{#each itemController="player"}}
   <li>
     {{name}}
     <ul>
-      {{!-- Scores --}}
-      {{#each this.scores}}
-        <li>Type: {{score_type.type}}</li>
-        <li>Score {{points}}</li>
+      {{!-- Each Score --}}
+      {{#each scores}}
+        <li>
+          {{render "score" this}}
+        </li>
       {{/each}}
+      <li><strong>Total Score: {{total}}</strong></li>
     </ul>
   </li>
   {{else}}
   <li>
-    No records!
+    No Players!
   </li>
   {{/each}}
 </ul>
+
+<h2>
+  {{winnersInflect}}
+  <ul>
+    {{#each winners}}
+      <li>{{name}} </li>
+    {{else}}
+      <li>..nobody!</li>
+    {{/each}}
+  </ul>
+</h2>
